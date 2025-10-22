@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="date" content="Wed Oct 22, 2025" />
+  <title>Section 1 -  Sample Memo</title>
+
+
+<!--- MathJax stuff -->
+<script type="text/javascript" src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+<!--- toggle_more function  -->
+<script type="text/javascript">
+    //<![CDATA[
+    function toggle_more(objID) {
+        if (!document.getElementById) return;
+        var ob = document.getElementById(objID).style;
+        ob.display = (ob.display == 'block')?'none':'block';
+        var ob2 = document.getElementById('link:'+objID);
+        ob2.className = (ob2.className == 'open') ? 'closed' : 'open';
+    }
+    //]]>
+</script>
+
+</head>
+
+<body>
+
+
+<!--
+<div id="beforebody">
+</div>
+-->
+
+
+<div id="mainbody">
+<div id="pagecontainer">
+
+<h1 id="section-1">Section 1</h1>
+<h2 id="sub-section-1">Sub-section 1</h2>
+<p><a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a>
+dolor sit amet, duo ut putant verear, nam ut brute utroque. Officiis
+qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip
+accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod
+pertinax an, ea tale volumus vel. At porro soleat est. Debet facilis
+admodum an sed, at falli feugiat est.</p>
+<ol type="1">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+<p>You can do latex in-line, <span class="math inline">\(e^{i\pi} + 1 =
+0\)</span>, like that. Or equations:</p>
+<p><span class="math display">\[\begin{equation}
+    \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,.
+\end{equation}\]</span></p>
+<p>title: Sample Memo author: Mihir Ballari date: today fontsize: 11pt
+geometry: - margin=1in link-citations: false</p>
+
+</div> <!-- end pagecontainer -->
+</div> <!-- end mainbody -->
+
+
+<!--
+<div id="afterbody">
+</div>
+-->
+
+<div id="site_footer">
+  <div class="signature">
+    <p><i></i></p>
+    
+    <p>Wed Oct 22, 2025</p>
+  </div>
+  <div class="license">
+    
+    <p>Made with <a href="https://github.com/rreece/markdown-memo">markdown-memo</a>.</p>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>
