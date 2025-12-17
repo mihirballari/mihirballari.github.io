@@ -1,3 +1,0 @@
-[submodule "vendor/markdown-memo"]
-	path = vendor/markdown-memo
-	url = https://github.com/rreece/markdown-memo.git
