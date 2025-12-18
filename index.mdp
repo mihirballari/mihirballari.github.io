@@ -37,3 +37,4 @@ page](06-figs-tables.html#table-of-contents-per-html-page)
     1.  [Google analytics integration](09-appendix-a.html#google-analytics-integration)
     1.  [Word count](09-appendix-a.html#word-count)
 
+<! deploy-test Wed Dec 17 19:57:51 EST 2025 >
