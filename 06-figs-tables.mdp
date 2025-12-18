@@ -188,3 +188,20 @@ For example:
 
 makes [@fig:plot_table] and [@tbl:plot_table].
 
+![A plot of [@tbl:plot_table].](img/plot_table.png){#fig:plot_table}
+
+Table: My caption {#tbl:plot_table}
+
+|    X |  Apple |  Banana | Pistachio |
+|-----:|-------:|--------:|----------:|
+|    1 |      2 |       2 |         3 |
+|    2 |      3 |       1 |         5 |
+|    3 |      5 |       0 |         5 |
+|    4 |      4 |       1 |         7 |
+|    5 |      7 |       2 |         8 |
+|    6 |      8 |       3 |         9 |
+|    8 |      9 |       4 |         8 |
+|   11 |      9 |       3 |         9 |
+
+
+<!-- REFERENCES -->

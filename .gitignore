@@ -1,0 +1,14 @@
+
+# local dev
+.DS_Store
+.envrc
+.venv/
+__pycache__/
+
+# markdown-memo build junk (regenerates every build)
+*.mdp
+pandoc.log
+mybib.log
+
+# optional: if you generate PDFs locally and don't want them in the site
+*.pdf
