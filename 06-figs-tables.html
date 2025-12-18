@@ -5,9 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="R. Reece and J. Coauthor" />
   <meta name="date" content="Wed Dec 17, 2025" />
-  <title>Floats, Figures, and Tables -  markdown-memo example document</title>
+  <title>Floats, Figures, and Tables -  Mihir  Ballari</title>
   <meta name="keywords" content="academic writing, blogging, digital
 humanities, LaTeX, Markdown, open publishing, open science,
 productivity, technical writing, typesetting, writing" />
@@ -39,7 +38,7 @@ productivity, technical writing, typesetting, writing" />
 <body>
 
 <div id="site_header">
-    <a href="./">markdown-memo example document</a>
+    <a href="./">Mihir Ballari</a>
 </div>
 
 <!--
@@ -68,7 +67,6 @@ productivity, technical writing, typesetting, writing" />
 of contents per html page</a></li>
 <li><a href="06-figs-tables.html#clickmore">Clickmore</a></li>
 <li><a href="06-figs-tables.html#plottable">PlotTable</a></li>
-<li><a href="06-figs-tables.html#references">References</a></li>
 </ol>
 <h2 id="figures">Figures</h2>
 <p>To add a figure, use the following basic syntax:</p>
@@ -108,7 +106,7 @@ torquatos, cu vis sumo decore. Eirmod hendrerit an pri.</p>
 <p>produces:</p>
 <figure id="fig:ATLAS_local_p0_vs_mH">
 <img src="img/ATLAS-local-p0-vs-mH.png"
-alt="Figure 2: The observed (solid) local p_{0} as a function of m_{H} in the low mass range. The dashed curve shows the expected local p_{0} under the hypothesis of a SM Higgs boson signal at that mass with its \pm{}1\sigma band. The horizontal dashed lines indicate the p-values corresponding to significances of 1 to 6\sigma&#xA0;(ATLAS Collaboration, 2012)." />
+alt="Figure 2: The observed (solid) local p_{0} as a function of m_{H} in the low mass range. The dashed curve shows the expected local p_{0} under the hypothesis of a SM Higgs boson signal at that mass with its \pm{}1\sigma band. The horizontal dashed lines indicate the p-values corresponding to significances of 1 to 6\sigma&#xA0;[@ATLAS_2012_Observation_of_a_new_particle_in_the_search]." />
 <figcaption aria-hidden="true">Figure 2: The observed (solid) local
 <span class="math inline">\(p_{0}\)</span> as a function of <span
 class="math inline">\(m_{H}\)</span> in the low mass range. The dashed
@@ -119,8 +117,7 @@ class="math inline">\(\pm{}1\sigma\)</span> band. The horizontal dashed
 lines indicate the <span class="math inline">\(p\)</span>-values
 corresponding to significances of 1 to 6<span
 class="math inline">\(\sigma\)</span>&#xA0;<span class="citation"
-data-cites="ATLAS_2012_Observation_of_a_new_particle_in_the_search">(ATLAS
-Collaboration, 2012)</span>.</figcaption>
+data-cites="ATLAS_2012_Observation_of_a_new_particle_in_the_search">[@ATLAS_2012_Observation_of_a_new_particle_in_the_search]</span>.</figcaption>
 </figure>
 <p>You can refer to labeled figuers like this:</p>
 <pre><code>[@fig:ATLAS_local_p0_vs_mH] shows the $p_{0}$ value as a function of the reconstructed
@@ -153,8 +150,7 @@ experiment.</p>
 sub-detector in ATLAS for the primary sub-detectors (ignoring the
 minbias trigger system, luminosity monitors, and DCS sensors) <span
 class="citation"
-data-cites="ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron">(ATLAS
-Collaboration, 2008)</span>.</caption>
+data-cites="ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron">[@ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron]</span>.</caption>
 <thead>
 <tr>
 <th style="text-align: left;">System</th>
@@ -358,38 +354,15 @@ automatically generated.</p>
 </tbody>
 </table>
 <!-- REFERENCES -->
-<h2 id="references">References</h2>
-<p></p>
-<div id="refs" class="references csl-bib-body hanging-indent"
-data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron"
-class="csl-entry" role="listitem">
-ATLAS Collaboration. (2008). <span class="nocase">The ATLAS Experiment
-at the CERN Large Hadron Collider.</span> <em>Journal of
-Instrumentation</em>, <em><span>3</span></em>, 08003. <a
-href="https://cds.cern.ch/record/1129811">https://cds.cern.ch/record/1129811</a>
-</div>
-<div id="ref-ATLAS_2012_Observation_of_a_new_particle_in_the_search"
-class="csl-entry" role="listitem">
-&#x2014;&#x2014;&#x2014;. (2012). <span class="nocase">Observation of a new particle in the
-search for the Standard Model Higgs boson with the ATLAS detector at the
-LHC.</span> <em>Physics Letters B</em>, <em><span>716</span></em>, 1&#x2013;29.
-<a
-href="https://arxiv.org/abs/1207.7214">https://arxiv.org/abs/1207.7214</a>
-</div>
-</div>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>University of California, Santa Cruz / <a
-href="mailto:ryan.reece@gmail.com"
-class="email">ryan.reece@gmail.com</a> / <a
-href="http://rreece.github.io" class="uri">http://rreece.github.io</a><a
-href="#fnref1" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
-<li id="fn2"><p>Joe University, Joeville / <a href="mailto:jane@joe.edu"
-class="email">jane@joe.edu</a> / <a href="http://jane.joe.edu"
-class="uri">http://jane.joe.edu</a><a href="#fnref2"
+<li id="fn1"><p>Rutgers University/ <a
+href="mailto:mihirballari@gmail.com"
+class="email">mihirballari@gmail.com</a> / <a
+href="http://mihirballari.github.io"
+class="uri">http://mihirballari.github.io</a><a href="#fnref1"
 class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 </ol>
 </section>
@@ -413,8 +386,9 @@ class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 
 <div id="site_footer">
   <div class="signature">
-    <p><i>R. Reece and J. Coauthor</i></p>
-    <p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+    <p><i></i></p>
+    <p><a class="email" href="mailto:mihirballari@gmail.com">
+mihirballari@gmail.com </a></p>
     <p>Wed Dec 17, 2025</p>
   </div>
   <div class="license">

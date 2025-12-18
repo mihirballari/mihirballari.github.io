@@ -5,9 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="R. Reece and J. Coauthor" />
   <meta name="date" content="Wed Dec 17, 2025" />
-  <title>Bibliographies -  markdown-memo example document</title>
+  <title>Bibliographies -  Mihir  Ballari</title>
   <meta name="keywords" content="academic writing, blogging, digital
 humanities, LaTeX, Markdown, open publishing, open science,
 productivity, technical writing, typesetting, writing" />
@@ -39,7 +38,7 @@ productivity, technical writing, typesetting, writing" />
 <body>
 
 <div id="site_header">
-    <a href="./">markdown-memo example document</a>
+    <a href="./">Mihir Ballari</a>
 </div>
 
 <!--
@@ -66,7 +65,6 @@ productivity, technical writing, typesetting, writing" />
 bibliography</a></li>
 <li><a href="04-bibliographies.html#doing-citations">Doing
 citations</a></li>
-<li><a href="04-bibliographies.html#references">References</a></li>
 </ol>
 <h2 id="making-a-bibliography">Making a bibliography</h2>
 <p>Markdown-memo uses <a
@@ -119,27 +117,27 @@ not run.</p>
 like:</p>
 <pre><code>@Miller_2014_Realism argues that we should get real.</code></pre>
 <p>which produces:</p>
-<p><span class="citation" data-cites="Miller_2014_Realism">Miller
-(2014)</span> argues that we should get real.</p>
+<p><span class="citation"
+data-cites="Miller_2014_Realism">[@Miller_2014_Realism]</span> argues
+that we should get real.</p>
 <p>Inside a caption, you may want to end it with the citation in
 parentheses like this:</p>
 <pre><code>Blah blah blah [@Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I]\.</code></pre>
 <p>which produces:</p>
 <p>Blah blah blah <span class="citation"
-data-cites="Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I">(Feynman,
-1963)</span>.</p>
-<p>Typically, I find it better to leave citations<a href="#fn3"
-class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> in
+data-cites="Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I">[@Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I]</span>.</p>
+<p>Typically, I find it better to leave citations<a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in
 footnotes to keep from cluttering the main text. Let&#x2019;s try citing
 various kinds of references. Feynman said some important things<a
-href="#fn4" class="footnote-ref" id="fnref4"
-role="doc-noteref"><sup>4</sup></a>. But everything is a footnote to
-Plato<a href="#fn5" class="footnote-ref" id="fnref5"
-role="doc-noteref"><sup>5</sup></a>. Van<a href="#fn6"
-class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> is
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>. But everything is a footnote to
+Plato<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>. Van<a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> is
 a cool cat too. A reference with more than 4 authors should be
-automatically shortened with <em>et al.</em><a href="#fn7"
-class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+automatically shortened with <em>et al.</em><a href="#fn6"
+class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
 <p>In order for a References section to be generated per html page, you
 need to add a special html comment near the end of your Markdown file
 for that page:</p>
@@ -150,87 +148,31 @@ complete References section at the end as long as</p>
 <pre><code>dorefs: true</code></pre>
 <p>is set in <code>meta.yaml</code>.</p>
 <!-- REFERENCES -->
-<h2 id="references">References</h2>
-<p></p>
-<div id="refs" class="references csl-bib-body hanging-indent"
-data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Feynman_1963_The_Feynman_Lectures_on_Physics_Volume_I"
-class="csl-entry" role="listitem">
-Feynman, R. P. (1963). <em><span class="nocase">The Feynman Lectures on
-Physics, Volume I</span></em>. <span>California Institute of
-Technology</span>. <a
-href="http://www.feynmanlectures.caltech.edu/I_03.html">http://www.feynmanlectures.caltech.edu/I_03.html</a>
-</div>
-<div
-id="ref-Feynman_1965_The_Development_of_the_Space_Time_View_of_Quantum"
-class="csl-entry" role="listitem">
-&#x2014;&#x2014;&#x2014;. (1965). <span class="nocase">The Development of the Space-Time View
-of Quantum Electrodynamics</span>. <span>Nobel Lecture, December 11,
-1965</span>. <a
-href="http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html">http://www.nobelprize.org/nobel_prizes/physics/laureates/1965/feynman-lecture.html</a>
-</div>
-<div
-id="ref-Guest_2016_Jet_flavor_classification_in_high_energy_physics"
-class="csl-entry" role="listitem">
-Guest, D. et al. (2016). <span class="nocase">Jet flavor classification
-in high-energy physics with deep neural networks.</span> <em>Physical
-Review D</em>, <em><span>94</span></em>, 112002. <a
-href="https://arxiv.org/abs/1607.08633">https://arxiv.org/abs/1607.08633</a>
-</div>
-<div id="ref-Miller_2014_Realism" class="csl-entry" role="listitem">
-Miller, A. (2014). <span>Realism.</span> <em>Stanford Encyclopedia of
-Philosophy</em>. <a
-href="http://plato.stanford.edu/entries/realism/">http://plato.stanford.edu/entries/realism/</a>
-</div>
-<div id="ref-Plato_2000_The_Republic" class="csl-entry" role="listitem">
-Plato. (2000). <em><span>The Republic</span></em>. (T. Griffith, Trans.,
-G. Ferrari, Ed.). <span>Cambridge University Press</span>. (Originally
-written ca. 380 BCE).
-</div>
-<div id="ref-Quine_1969_Natural_kinds" class="csl-entry"
-role="listitem">
-Quine, W. V. O. (1969). <span class="nocase">Natural kinds</span>. In
-<em><span class="nocase">Ontological Relativity and Other
-Essays</span></em> (pp. 114&#x2013;138). <span>Columbia University
-Press</span>.
-</div>
-<div id="ref-vanFraassen_1980_The_Scientific_Image" class="csl-entry"
-role="listitem">
-van Fraassen, B. (1980). <em><span>The Scientific Image</span></em>.
-<span>Oxford University Press</span>.
-</div>
-</div>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>University of California, Santa Cruz / <a
-href="mailto:ryan.reece@gmail.com"
-class="email">ryan.reece@gmail.com</a> / <a
-href="http://rreece.github.io" class="uri">http://rreece.github.io</a><a
-href="#fnref1" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
-<li id="fn2"><p>Joe University, Joeville / <a href="mailto:jane@joe.edu"
-class="email">jane@joe.edu</a> / <a href="http://jane.joe.edu"
-class="uri">http://jane.joe.edu</a><a href="#fnref2"
+<li id="fn1"><p>Rutgers University/ <a
+href="mailto:mihirballari@gmail.com"
+class="email">mihirballari@gmail.com</a> / <a
+href="http://mihirballari.github.io"
+class="uri">http://mihirballari.github.io</a><a href="#fnref1"
 class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn2"><p><span class="citation"
+data-cites="Quine_1969_Natural_kinds">[@Quine_1969_Natural_kinds]</span>.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 <li id="fn3"><p><span class="citation"
-data-cites="Quine_1969_Natural_kinds">Quine (1969)</span>.<a
+data-cites="Feynman_1965_The_Development_of_the_Space_Time_View_of_Quantum">[@Feynman_1965_The_Development_of_the_Space_Time_View_of_Quantum]</span>.<a
 href="#fnref3" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 <li id="fn4"><p><span class="citation"
-data-cites="Feynman_1965_The_Development_of_the_Space_Time_View_of_Quantum">Feynman
-(1965)</span>.<a href="#fnref4" class="footnote-back"
-role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+data-cites="Plato_2000_The_Republic">[@Plato_2000_The_Republic]</span>.<a
+href="#fnref4" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 <li id="fn5"><p><span class="citation"
-data-cites="Plato_2000_The_Republic">Plato (2000)</span>.<a
+data-cites="vanFraassen_1980_The_Scientific_Image">[@vanFraassen_1980_The_Scientific_Image]</span>.<a
 href="#fnref5" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 <li id="fn6"><p><span class="citation"
-data-cites="vanFraassen_1980_The_Scientific_Image">van Fraassen
-(1980)</span>.<a href="#fnref6" class="footnote-back"
-role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
-<li id="fn7"><p><span class="citation"
-data-cites="Guest_2016_Jet_flavor_classification_in_high_energy_physics">Guest,
-D. et al. (2016)</span>.<a href="#fnref7" class="footnote-back"
-role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+data-cites="Guest_2016_Jet_flavor_classification_in_high_energy_physics">[@Guest_2016_Jet_flavor_classification_in_high_energy_physics]</span>.<a
+href="#fnref6" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 </ol>
 </section>
 
@@ -253,8 +195,9 @@ role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
 
 <div id="site_footer">
   <div class="signature">
-    <p><i>R. Reece and J. Coauthor</i></p>
-    <p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+    <p><i></i></p>
+    <p><a class="email" href="mailto:mihirballari@gmail.com">
+mihirballari@gmail.com </a></p>
     <p>Wed Dec 17, 2025</p>
   </div>
   <div class="license">

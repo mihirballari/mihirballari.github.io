@@ -1,43 +1,34 @@
 ---
 ## required meta-data -------------------------------------
 output: example
-title: markdown-memo example document
-titleshort: markdown-memo example document
-subtitle: make writing easier and more productive
-authorshort: R. Reece and J. Coauthor
-author1: Ryan Reece
-email1: ryan.reece@gmail.com
-homepage1: http://rreece.github.io
-affiliation1: University of California, Santa Cruz
-author2: Jane Coauthor
-email2: jane.coauthor@blah.com
-homepage2: http://jane.blah.com
-affiliation2: Joe University
+title: Mihir  Ballari
+titleshort: Mihir's GitHub Pages
+subtitle: Welcome to my GitHub Pages
+author1:  Mihir Ballari 
+email1: mihirballari@gmail.com  
+homepage1: http://mihirballari.github.io
+affiliation1: Rutgers University
 #author3: Joe Coauthor
 #email3: joe.coauthor@blah.com
 #homepage3: http://joe.blah.com
 #affiliation3: Joe University
 author:
     -   |
-        [Ryan Reece](http://rreece.github.io/)[^ReeceSCIPP]
+        [Mihir Ballari](http://mihirballari.github.io/)[^ReeceSCIPP]
 
-        [^ReeceSCIPP]: University of California, Santa Cruz / <ryan.reece@gmail.com> / <http://rreece.github.io>
-    -   |
-        Jane Coauthor[^Jane]
-
-        [^Jane]: Joe University, Joeville / <jane@joe.edu> / <http://jane.joe.edu>
+        [^ReeceSCIPP]:Rutgers University/ <mihirballari@gmail.com> / <http://mihirballari.github.io>
 #    -   |
 #        Joe Coauthor[^Joe]
 #
 #        [^Joe]: Joe University, Joeville / <joe@joe.edu> / <http://joe.joe.edu>
 date: \today
 #date: 'January 1, 2017'
-docid: EXAMPLE-DOC-000 # arXiv:1606.09150 # ATLAS-COM-PHYS-2010-200
-draft: true
+# docid: EXAMPLE-DOC-000 # arXiv:1606.09150 # ATLAS-COM-PHYS-2010-200
+draft: false
 #license: ''
 #license: '&copy; 2015-2021 [Ryan Reece](http://rreece.github.io/). All rights reserved.'
 license: '<span class="copy-left">&copy;</span> 2015-2021 [Ryan Reece](http://rreece.github.io/). Licensed for sharing under [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/).'
-dorefs: true
+dorefs: false
 submitted: ''
 #submitted: 'Submitted to My Favorite Journal'
 #submitted: 'Journal reference: *Phys. Rev. D 92*, 072001 (2015)'
@@ -48,7 +39,7 @@ abstract: |
     meant to aid quick development of quality html and pdf
     documents from simple Markdown markup.
     Markdown-memo is developed by Ryan Reece at
-    [https://github.com/rreece/markdown-memo](https://github.com/rreece/markdown-memo).
+    [https://github.com/rreece/markdown-memo](https://rreece.github.io/sw/markdown-memo/).
 keywords: academic writing, blogging, digital humanities, LaTeX, Markdown, open publishing, open science, productivity, technical writing, typesetting, writing
 citation-style: templates/apa-no-doi-no-issue-with-notes.csl
 figureTitle: "Figure"
@@ -61,7 +52,7 @@ tblPrefix: "Table"
 css: 
     -   'templates/markdown-memo.css'
 #    -   'https://use.fontawesome.com/releases/v5.2.0/css/all.css'
-email: '<img class="email" src="img/my-email.png" alt="my email address"/>'
+email: '<a class="email" href="mailto:mihirballari@gmail.com">  mihirballari@gmail.com </a>'
 #email: '<img class="email" src="img/my-email-alt.png" alt="my email address"/>'
 #disqus_shortname: 'my-sites-disqus-name'
 #description: 'Write a description of this page.'
@@ -115,5 +106,5 @@ parskip: '11pt'
 secnewpage: false
 #spacing: '1.2'
 toc: true
-tocdepth: 3
+tocdepth: 1
 ...
