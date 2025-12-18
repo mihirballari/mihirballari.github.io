@@ -1,6 +1,6 @@
 markdown-memo
 ===========================
-
+ 
 [![CI badge](https://github.com/rreece/markdown-memo/actions/workflows/ci.yml/badge.svg)](https://github.com/rreece/markdown-memo/actions)
 
 *NOTE: I have a new motivation to clean up this project.
