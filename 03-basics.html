@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="R. Reece and J. Coauthor" />
+  <meta name="date" content="Wed Dec 17, 2025" />
+  <title>Markdown basics -  markdown-memo example document</title>
+  <meta name="keywords" content="academic writing, blogging, digital
+humanities, LaTeX, Markdown, open publishing, open science,
+productivity, technical writing, typesetting, writing" />
+  <link rel="stylesheet" type="text/css" href="templates/markdown-memo.css"/>
+  <link rel="icon" type="image/png" href="img/markdown-favicon-196x196.png" />
+
+
+<!--- MathJax stuff -->
+<script type="text/javascript" src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+<!--- toggle_more function  -->
+<script type="text/javascript">
+    //<![CDATA[
+    function toggle_more(objID) {
+        if (!document.getElementById) return;
+        var ob = document.getElementById(objID).style;
+        ob.display = (ob.display == 'block')?'none':'block';
+        var ob2 = document.getElementById('link:'+objID);
+        ob2.className = (ob2.className == 'open') ? 'closed' : 'open';
+    }
+    //]]>
+</script>
+
+</head>
+
+<body>
+
+<div id="site_header">
+    <a href="./">markdown-memo example document</a>
+</div>
+
+<!--
+<div id="beforebody">
+</div>
+-->
+
+<div class="nav">
+<ul>
+    <li> <a href="./">&#8634;&nbsp;Contents</a> </li>
+    <li> <a href="#site_footer">&#8615;&nbsp;Bottom</a> </li>
+    <li> <a href="./02-getting-started.html">&#8612;&nbsp;Previous</a> </li>
+    <li> <a href="./04-bibliographies.html">&#8614;&nbsp;Next</a> </li>
+</ul>
+</div>
+
+<div id="mainbody">
+<div id="pagecontainer">
+
+<h1 id="markdown-basics">Markdown basics</h1>
+<p>Here we review the basics of Markdown. A further reference on
+Markdown syntax by its creator is <a
+href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
+<h3 class="unnumbered" id="contents">Contents</h3>
+<ol type="1">
+<li><a href="03-basics.html#sec:sections">Sections</a></li>
+<li><a href="03-basics.html#sec:lists">Lists</a></li>
+<li><a href="03-basics.html#sec:blocks">Blocks</a></li>
+<li><a href="03-basics.html#sec:fonts">Fonts</a></li>
+<li><a href="03-basics.html#sec:links-and-labels">Links and
+labels</a></li>
+<li><a href="03-basics.html#sec:footnotes">Footnotes</a></li>
+<li><a href="03-basics.html#references">References</a></li>
+</ol>
+<h2 id="sec:sections">Sections</h2>
+<p>Are markded like this:</p>
+<pre><code>Section title {#sec:put-optional-section-label-here}
+===============================================================================
+
+Sub-section title {#sec:put-optional-sub-section-label-here}
+-------------------------------------------------------------------------------</code></pre>
+<p>Or marked like this:</p>
+<pre><code># Section title {#sec:put-optional-section-label-here}
+
+## Sub-section title {#sec:put-optional-sub-section-label-here}
+
+### Sub-sub-section title
+
+Main text here.</code></pre>
+<p>Note the examples of labeling a section in braces with
+<code>#</code>, as shown above. This allows one to refer to labels in
+the text like:</p>
+<pre><code>The next section, [@sec:lists], is about lists.</code></pre>
+<p>The next section, Section&#xA0;1.2, is about lists.</p>
+<h2 id="sec:lists">Lists</h2>
+<p><strong>Unnumbered lists</strong> like this:</p>
+<pre><code>-   Galileo Galilei
+-   Robert G. Ingersoll
+-   Jill Tarter</code></pre>
+<ul>
+<li>Galileo Galilei</li>
+<li>Robert G. Ingersoll</li>
+<li>Jill Tarter</li>
+</ul>
+<p><strong>Numbered lists</strong> like this:</p>
+<pre><code>1.  Na&amp;iuml;ve realists
+1.  Scientific realists
+1.  Constructive empiricists
+1.  Positivists
+1.  Relativists</code></pre>
+<ol type="1">
+<li>Na&#xEF;ve realists</li>
+<li>Scientific realists</li>
+<li>Constructive empiricists</li>
+<li>Positivists</li>
+<li>Relativists</li>
+</ol>
+<h2 id="sec:blocks">Blocks</h2>
+<p>The following is a <strong>quote block</strong>.</p>
+<pre><code>&gt;   It ain&#39;t what you don&#39;t know that gets you into trouble.
+&gt;   It&#39;s what you know for sure that just ain&#39;t so.  
+
+-- Mark Twain</code></pre>
+<blockquote>
+<p>It ain&#x2019;t what you don&#x2019;t know that gets you into trouble. It&#x2019;s what
+you know for sure that just ain&#x2019;t so.</p>
+</blockquote>
+<p>&#x2013; Mark Twain</p>
+<p>A <strong>code block</strong> (used throughout these examples) is
+just indented with 4 spaces, like this:</p>
+<pre><code>    def bubble_sort(alist):
+        exchanges = True
+        passnum = len(alist)-1
+        while passnum &gt; 0 and exchanges:
+           exchanges = False
+           for i in range(passnum):
+               if alist[i]&gt;alist[i+1]:
+                   exchanges = True
+                   temp = alist[i]
+                   alist[i] = alist[i+1]
+                   alist[i+1] = temp
+           passnum = passnum-1
+
+    alist=[20,30,40,90,50,60,70,80,100,110]
+    bubble_sort(alist)
+    print(alist)</code></pre>
+<p>which makes:</p>
+<pre><code>def bubble_sort(alist):
+    exchanges = True
+    passnum = len(alist)-1
+    while passnum &gt; 0 and exchanges:
+       exchanges = False
+       for i in range(passnum):
+           if alist[i]&gt;alist[i+1]:
+               exchanges = True
+               temp = alist[i]
+               alist[i] = alist[i+1]
+               alist[i+1] = temp
+       passnum = passnum-1
+
+alist=[20,30,40,90,50,60,70,80,100,110]
+bubble_sort(alist)
+print(alist)</code></pre>
+<p>Maybe you want to refer to <strong>code inline</strong> like this
+with backticks:</p>
+<pre><code>Here&#39;s some inline code: `vec.push_back(3.14)`.</code></pre>
+<p>Here&#x2019;s some inline code: <code>vec.push_back(3.14)</code>.</p>
+<p>For poems and the like where you want <strong>linebreaks taken
+literally</strong>, prepend lines with <code>|</code> and a single
+space. Additional spaces can be used, but will indent the output.</p>
+<pre><code>| Art is long,
+| Life is short,
+| Opportunity fleeting,
+| Experiment dangerous,
+| Judgment difficult.</code></pre>
+<div class="line-block">Art is long,<br />
+Life is short,<br />
+Opportunity fleeting,<br />
+Experiment dangerous,<br />
+Judgment difficult.</div>
+<p>Otherwise, one can put two or more spaces at the end of a line of
+Markdown for the linebreak to be taken literally<br />
+like<br />
+this.</p>
+<p>A <strong>horizontal rule</strong> can be made by just writing some
+number of dashes:</p>
+<pre><code>----------------------------------------------------</code></pre>
+<hr />
+<p>Boom.</p>
+<h2 id="sec:fonts">Fonts</h2>
+<pre><code>-   *This is emphasis.*
+-   **This is bold.**
+-   _This is also emphasis._
+-   __This is also bold.__
+-   _This is emphasis **and** bold._
+-   __This is bold *and* emphasis.__
+-   ~~This is struck-out.~~</code></pre>
+<p>produces:</p>
+<ul>
+<li><em>This is emphasis.</em></li>
+<li><strong>This is bold.</strong></li>
+<li><em>This is also emphasis.</em></li>
+<li><strong>This is also bold.</strong></li>
+<li><em>This is emphasis <strong>and</strong> bold.</em></li>
+<li><strong>This is bold <em>and</em> emphasis.</strong></li>
+<li><del>This is struck-out.</del></li>
+</ul>
+<p>Don&#x2019;t do these. These will work in LaTeX () but may not in html.</p>
+<pre><code>-   \textsf{This should be Sans.}
+-   \textsc{This Should BE SMALL caps.}
+-   $\textsf{This works though!}$
+-   $\textsc{But this does not!}$</code></pre>
+<h2 id="sec:links-and-labels">Links and labels</h2>
+<p>Links to URLs are done like this:</p>
+<pre><code>[Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)</code></pre>
+<p><a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem
+ipsum</a></p>
+<p>or used directly like this:</p>
+<pre><code>&lt;https://www.google.com&gt;</code></pre>
+<p><a href="https://www.google.com"
+class="uri">https://www.google.com</a></p>
+<p>When referring to labeled sections/figures/tables, you do not include
+the literal word &#x201C;Section&#x201D;, &#x201C;Figure&#x201D;, or &#x201C;Table&#x201D;, which will be included
+for you. These prefixes/words are configurable in the
+<code>meta.yaml</code> file.</p>
+<p>Refer to labeled things like this:</p>
+<ul>
+<li><strong>for sections:</strong>
+<code>See [@sec:footnotes] on footnotes.</code><br />
+See Section&#xA0;1.6 on footnotes.</li>
+<li><strong>for figures:</strong>
+<code>[@fig:scientific_universe] motivates the unity of science.</code><br />
+Figure&#xA0;<strong>&#xBF;fig:scientific_universe?</strong> motivates the unity of
+science.</li>
+<li><strong>for tables:</strong>
+<code>Numbers are in [@tbl:atlas_channels].</code><br />
+Numbers are in Table&#xA0;<strong>&#xBF;tbl:atlas_channels?</strong>.</li>
+<li><strong>for equations:</strong>
+<code>The generalized Stokes' theorem, eq.\ $\eqref{eq:stokes}$, is rad.</code><br />
+The generalized Stokes&#x2019; theorem, eq.&#xA0;<strong>&#xBF;eq:stokes?</strong>, is
+rad.</li>
+</ul>
+<p>TODO: The above references to labels on other pages unfortunately
+don&#x2019;t work in html, but they work in latex/pdf.</p>
+<p>You can refer to multiple lables like Section&#xA0;1.1-1.3 like this:</p>
+<pre><code>[@sec:sections;@sec:lists;@sec:blocks]</code></pre>
+<p>Automatic grouping into a range doesn&#x2019;t seem to be working (for
+latex, but does for html), so you can also try refer to Sections 1.1&#x2013;1.3
+in some versions like this:</p>
+<pre><code>[Sections @sec:sections]--[-@sec:blocks]</code></pre>
+<h2 id="sec:footnotes">Footnotes</h2>
+<pre><code>Here&#39;s how you do a footnote[^SomeSpecialNote].
+
+[^SomeSpecialNote]: Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque.
+    Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip
+    accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax
+    an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,
+    at falli feugiat est.</code></pre>
+<p>produces:</p>
+<p>Here&#x2019;s how you do a footnote<a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<h2 id="references">References</h2>
+<p></p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>University of California, Santa Cruz / <a
+href="mailto:ryan.reece@gmail.com"
+class="email">ryan.reece@gmail.com</a> / <a
+href="http://rreece.github.io" class="uri">http://rreece.github.io</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn2"><p>Joe University, Joeville / <a href="mailto:jane@joe.edu"
+class="email">jane@joe.edu</a> / <a href="http://jane.joe.edu"
+class="uri">http://jane.joe.edu</a><a href="#fnref2"
+class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn3"><p>Lorem ipsum dolor sit amet, duo ut putant verear, nam ut
+brute utroque. Officiis qualisque conceptam te duo, eu vim soluta
+numquam, has ut aliquip accusamus. Probo aliquam pri id. Mutat singulis
+ad vis, eam euismod pertinax an, ea tale volumus vel. At porro soleat
+est. Debet facilis admodum an sed, at falli feugiat est.<a
+href="#fnref3" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+</ol>
+</section>
+
+</div> <!-- end pagecontainer -->
+</div> <!-- end mainbody -->
+
+<div class="nav">
+<ul>
+    <li> <a href="./">&#8634;&nbsp;Contents</a> </li>
+    <li> <a href="#site_header">&#8613;&nbsp;Top</a> </li>
+    <li> <a href="./02-getting-started.html">&#8612;&nbsp;Previous</a> </li>
+    <li> <a href="./04-bibliographies.html">&#8614;&nbsp;Next</a> </li>
+</ul>
+</div>
+
+<!--
+<div id="afterbody">
+</div>
+-->
+
+<div id="site_footer">
+  <div class="signature">
+    <p><i>R. Reece and J. Coauthor</i></p>
+    <p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+    <p>Wed Dec 17, 2025</p>
+  </div>
+  <div class="license">
+    <p><span class="copy-left">&#xA9;</span> 2015-2021 <a
+href="http://rreece.github.io/">Ryan Reece</a>. Licensed for sharing
+under <a
+href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
+    <p>Made with <a href="https://github.com/rreece/markdown-memo">markdown-memo</a>.</p>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>

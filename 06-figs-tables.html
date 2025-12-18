@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="R. Reece and J. Coauthor" />
+  <meta name="date" content="Wed Dec 17, 2025" />
+  <title>Floats, Figures, and Tables -  markdown-memo example document</title>
+  <meta name="keywords" content="academic writing, blogging, digital
+humanities, LaTeX, Markdown, open publishing, open science,
+productivity, technical writing, typesetting, writing" />
+  <link rel="stylesheet" type="text/css" href="templates/markdown-memo.css"/>
+  <link rel="icon" type="image/png" href="img/markdown-favicon-196x196.png" />
+
+
+<!--- MathJax stuff -->
+<script type="text/javascript" src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+<!--- toggle_more function  -->
+<script type="text/javascript">
+    //<![CDATA[
+    function toggle_more(objID) {
+        if (!document.getElementById) return;
+        var ob = document.getElementById(objID).style;
+        ob.display = (ob.display == 'block')?'none':'block';
+        var ob2 = document.getElementById('link:'+objID);
+        ob2.className = (ob2.className == 'open') ? 'closed' : 'open';
+    }
+    //]]>
+</script>
+
+</head>
+
+<body>
+
+<div id="site_header">
+    <a href="./">markdown-memo example document</a>
+</div>
+
+<!--
+<div id="beforebody">
+</div>
+-->
+
+<div class="nav">
+<ul>
+    <li> <a href="./">&#8634;&nbsp;Contents</a> </li>
+    <li> <a href="#site_footer">&#8615;&nbsp;Bottom</a> </li>
+    <li> <a href="./05-math.html">&#8612;&nbsp;Previous</a> </li>
+    <li> <a href="./07-conclusion.html">&#8614;&nbsp;Next</a> </li>
+</ul>
+</div>
+
+<div id="mainbody">
+<div id="pagecontainer">
+
+<h1 id="floats-figures-and-tables">Floats, Figures, and Tables</h1>
+<h3 class="unnumbered" id="contents">Contents</h3>
+<ol type="1">
+<li><a href="06-figs-tables.html#figures">Figures</a></li>
+<li><a href="06-figs-tables.html#tables">Tables</a></li>
+<li><a href="06-figs-tables.html#table-of-contents-per-html-page">Table
+of contents per html page</a></li>
+<li><a href="06-figs-tables.html#clickmore">Clickmore</a></li>
+<li><a href="06-figs-tables.html#plottable">PlotTable</a></li>
+<li><a href="06-figs-tables.html#references">References</a></li>
+</ol>
+<h2 id="figures">Figures</h2>
+<p>To add a figure, use the following basic syntax:</p>
+<pre><code>![caption](img/image-path.png){#fig:scientific_universe}</code></pre>
+<p>For example,</p>
+<pre><code>![The scale of the universe mapped to the branches of science and the hierarchy
+    of science. CC BY-SA 3.0 (2013) [Wikimedia Commons](https://en.wikipedia.org/wiki/Science#/media/File:The_Scientific_Universe.png).
+    ](img/1024px-the_scientific_universe.png){#fig:scientific_universe}</code></pre>
+<p>produces:</p>
+<figure id="fig:scientific_universe">
+<img src="img/1024px-the_scientific_universe.png"
+alt="Figure 1: The scale of the universe mapped to the branches of science and the hierarchy of science. CC BY-SA 3.0 (2013) Wikimedia Commons." />
+<figcaption aria-hidden="true">Figure 1: The scale of the universe
+mapped to the branches of science and the hierarchy of science. CC BY-SA
+3.0 (2013) <a
+href="https://en.wikipedia.org/wiki/Science#/media/File:The_Scientific_Universe.png">Wikimedia
+Commons</a>.</figcaption>
+</figure>
+<p>Figure&#xA0;1 shows some cool things.</p>
+<p>Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute
+utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has
+ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam
+euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet
+facilis admodum an sed, at falli feugiat est.</p>
+<p>Ne nonumy quodsi petentium vix, mel ad errem accusata periculis.
+Porro urbanitas consetetur mei eu, his nisl officiis ei. Ei cum fugit
+graece, ne qui tantas qualisque voluptaria. Vis ut laoreet euripidis,
+vix aeque omittam at, vix no cetero volumus. Per te omnium volutpat
+torquatos, cu vis sumo decore. Eirmod hendrerit an pri.</p>
+<p>Another example:</p>
+<pre><code>![The observed (solid) local $p_{0}$ as a function of $m_{H}$ in the low mass range.
+    The dashed curve shows the expected local $p_{0}$ under the hypothesis of a
+    SM Higgs boson signal at that mass with its $\pm{}1\sigma$ band.
+    The horizontal dashed lines indicate the $p$-values corresponding to significances
+    of 1 to 6$\sigma$\ [@ATLAS_2012_Observation_of_a_new_particle_in_the_search]\.
+    ](img/ATLAS-local-p0-vs-mH.png){#fig:ATLAS_local_p0_vs_mH}</code></pre>
+<p>produces:</p>
+<figure id="fig:ATLAS_local_p0_vs_mH">
+<img src="img/ATLAS-local-p0-vs-mH.png"
+alt="Figure 2: The observed (solid) local p_{0} as a function of m_{H} in the low mass range. The dashed curve shows the expected local p_{0} under the hypothesis of a SM Higgs boson signal at that mass with its \pm{}1\sigma band. The horizontal dashed lines indicate the p-values corresponding to significances of 1 to 6\sigma&#xA0;(ATLAS Collaboration, 2012)." />
+<figcaption aria-hidden="true">Figure 2: The observed (solid) local
+<span class="math inline">\(p_{0}\)</span> as a function of <span
+class="math inline">\(m_{H}\)</span> in the low mass range. The dashed
+curve shows the expected local <span
+class="math inline">\(p_{0}\)</span> under the hypothesis of a SM Higgs
+boson signal at that mass with its <span
+class="math inline">\(\pm{}1\sigma\)</span> band. The horizontal dashed
+lines indicate the <span class="math inline">\(p\)</span>-values
+corresponding to significances of 1 to 6<span
+class="math inline">\(\sigma\)</span>&#xA0;<span class="citation"
+data-cites="ATLAS_2012_Observation_of_a_new_particle_in_the_search">(ATLAS
+Collaboration, 2012)</span>.</figcaption>
+</figure>
+<p>You can refer to labeled figuers like this:</p>
+<pre><code>[@fig:ATLAS_local_p0_vs_mH] shows the $p_{0}$ value as a function of the reconstructed
+Higgs mass from the ATLAS experiment.</code></pre>
+<p>Figure&#xA0;2 shows the <span class="math inline">\(p_{0}\)</span> value
+as a function of the reconstructed Higgs mass from the ATLAS
+experiment.</p>
+<h2 id="tables">Tables</h2>
+<p>The basic syntax for a table is:</p>
+<pre><code>Table: Approximate number of readout channels per sub-detector in ATLAS for the primary sub-detectors (ignoring the minbias trigger system, luminosity monitors, and DCS sensors) [@ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron]. {#tbl:atlas_channels}
+
+| System                | Subsystem     |  Approx. channels |
+|:----------------------|:--------------|------------------:|
+| Inner detector        | Pixels        |              80 M |
+|                       | SCT           |             6.3 M |
+|                       | TRT           |             350 k |
+| EM Calorimeter        | LAr barrel    |             110 k |
+|                       | LAr end-cap   |              64 k |
+| Hadronic Calorimeter  | Tile barrel   |             9.8 k |
+|                       | LAr end-cap   |             5.6 k |
+|                       | LAr forward   |             3.5 k |
+| Muon spectrometer     | MDTs          |             350 k |
+|                       | CSCs          |              31 k |
+|                       | RPCs          |             370 k |
+|                       | TGCs          |             320 k |
+| Total                 |               |              88 M |</code></pre>
+<p>which produces:</p>
+<table id="tbl:atlas_channels">
+<caption>Table 1: Approximate number of readout channels per
+sub-detector in ATLAS for the primary sub-detectors (ignoring the
+minbias trigger system, luminosity monitors, and DCS sensors) <span
+class="citation"
+data-cites="ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron">(ATLAS
+Collaboration, 2008)</span>.</caption>
+<thead>
+<tr>
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Subsystem</th>
+<th style="text-align: right;">Approx. channels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Inner detector</td>
+<td style="text-align: left;">Pixels</td>
+<td style="text-align: right;">80 M</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SCT</td>
+<td style="text-align: right;">6.3 M</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TRT</td>
+<td style="text-align: right;">350 k</td>
+</tr>
+<tr>
+<td style="text-align: left;">EM Calorimeter</td>
+<td style="text-align: left;">LAr barrel</td>
+<td style="text-align: right;">110 k</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">LAr end-cap</td>
+<td style="text-align: right;">64 k</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hadronic Calorimeter</td>
+<td style="text-align: left;">Tile barrel</td>
+<td style="text-align: right;">9.8 k</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">LAr end-cap</td>
+<td style="text-align: right;">5.6 k</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">LAr forward</td>
+<td style="text-align: right;">3.5 k</td>
+</tr>
+<tr>
+<td style="text-align: left;">Muon spectrometer</td>
+<td style="text-align: left;">MDTs</td>
+<td style="text-align: right;">350 k</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CSCs</td>
+<td style="text-align: right;">31 k</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">RPCs</td>
+<td style="text-align: right;">370 k</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">TGCs</td>
+<td style="text-align: right;">320 k</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">88 M</td>
+</tr>
+</tbody>
+</table>
+<p>Refer to tables like this:</p>
+<pre><code>[@tbl:atlas_channels] shows some cool things too.</code></pre>
+<p>Table&#xA0;1 shows some cool things too.</p>
+<h2 id="table-of-contents-per-html-page">Table of contents per html
+page</h2>
+<p>To insert a table of contents for a single html page, add the
+following line to the Markdown, probably near the top of the page as is
+done for this one.</p>
+<pre><code>&lt;!-- PAGETOC --&gt;</code></pre>
+<h2 id="clickmore">Clickmore</h2>
+<p>You can hide parts of a document in a heading that needs to be
+clicked to show more by making a <code>div</code> of class
+<code>clickmore</code> and a <code>div</code> of class
+<code>more</code>, linked to eachother like this:</p>
+<pre><code>&lt;div class=&quot;clickmore&quot;&gt;&lt;a id=&quot;link:test1&quot; class=&quot;closed&quot; onclick=&quot;toggle_more(&#39;test1&#39;)&quot;&gt;Click for more details&lt;/a&gt;&lt;/div&gt;
+&lt;div id=&quot;test1&quot; class=&quot;more&quot;&gt;
+
+Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute utroque.
+Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip
+accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax
+an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,
+at falli feugiat est.
+
+...
+
+&lt;/div&gt;</code></pre>
+<p>For example:</p>
+<div class="clickmore">
+<a id="link:test1" class="closed" onclick="toggle_more('test1')">Click
+for more details</a>
+</div>
+<div id="test1" class="more">
+<p>Lorem ipsum dolor sit amet, duo ut putant verear, nam ut brute
+utroque. Officiis qualisque conceptam te duo, eu vim soluta numquam, has
+ut aliquip accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam
+euismod pertinax an, ea tale volumus vel. At porro soleat est. Debet
+facilis admodum an sed, at falli feugiat est.</p>
+<p>Ne nonumy quodsi petentium vix, mel ad errem accusata periculis.
+Porro urbanitas consetetur mei eu, his nisl officiis ei. Ei cum fugit
+graece, ne qui tantas qualisque voluptaria. Vis ut laoreet euripidis,
+vix aeque omittam at, vix no cetero volumus. Per te omnium volutpat
+torquatos, cu vis sumo decore. Eirmod hendrerit an pri.</p>
+</div>
+<p><!-- end clickmore --></p>
+<h2 id="plottable">PlotTable</h2>
+<p>Here, we show a <code>PlotTable</code>, where the user can specify a
+table, and a corresponding figure plotting the data in the table is
+automatically generated.</p>
+<p>For example:</p>
+<pre><code>PlotTable: My caption {#tbl:plot_table}
+
+|    X |  Apple |  Banana | Pistachio |
+|-----:|-------:|--------:|----------:|
+|    1 |      2 |       2 |         3 |
+|    2 |      3 |       1 |         5 |
+|    3 |      5 |       0 |         5 |
+|    4 |      4 |       1 |         7 |
+|    5 |      7 |       2 |         8 |
+|    6 |      8 |       3 |         9 |
+|    8 |      9 |       4 |         8 |
+|   11 |      9 |       3 |         9 |</code></pre>
+<p>makes Figure&#xA0;<strong>&#xBF;fig:plot_table?</strong> and
+Table&#xA0;<strong>&#xBF;tbl:plot_table?</strong>.</p>
+<h2 id="references">References</h2>
+<p></p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ATLAS_2008_The_ATLAS_Experiment_at_the_CERN_Large_Hadron"
+class="csl-entry" role="listitem">
+ATLAS Collaboration. (2008). <span class="nocase">The ATLAS Experiment
+at the CERN Large Hadron Collider.</span> <em>Journal of
+Instrumentation</em>, <em><span>3</span></em>, 08003. <a
+href="https://cds.cern.ch/record/1129811">https://cds.cern.ch/record/1129811</a>
+</div>
+<div id="ref-ATLAS_2012_Observation_of_a_new_particle_in_the_search"
+class="csl-entry" role="listitem">
+&#x2014;&#x2014;&#x2014;. (2012). <span class="nocase">Observation of a new particle in the
+search for the Standard Model Higgs boson with the ATLAS detector at the
+LHC.</span> <em>Physics Letters B</em>, <em><span>716</span></em>, 1&#x2013;29.
+<a
+href="https://arxiv.org/abs/1207.7214">https://arxiv.org/abs/1207.7214</a>
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>University of California, Santa Cruz / <a
+href="mailto:ryan.reece@gmail.com"
+class="email">ryan.reece@gmail.com</a> / <a
+href="http://rreece.github.io" class="uri">http://rreece.github.io</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn2"><p>Joe University, Joeville / <a href="mailto:jane@joe.edu"
+class="email">jane@joe.edu</a> / <a href="http://jane.joe.edu"
+class="uri">http://jane.joe.edu</a><a href="#fnref2"
+class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+</ol>
+</section>
+
+</div> <!-- end pagecontainer -->
+</div> <!-- end mainbody -->
+
+<div class="nav">
+<ul>
+    <li> <a href="./">&#8634;&nbsp;Contents</a> </li>
+    <li> <a href="#site_header">&#8613;&nbsp;Top</a> </li>
+    <li> <a href="./05-math.html">&#8612;&nbsp;Previous</a> </li>
+    <li> <a href="./07-conclusion.html">&#8614;&nbsp;Next</a> </li>
+</ul>
+</div>
+
+<!--
+<div id="afterbody">
+</div>
+-->
+
+<div id="site_footer">
+  <div class="signature">
+    <p><i>R. Reece and J. Coauthor</i></p>
+    <p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+    <p>Wed Dec 17, 2025</p>
+  </div>
+  <div class="license">
+    <p><span class="copy-left">&#xA9;</span> 2015-2021 <a
+href="http://rreece.github.io/">Ryan Reece</a>. Licensed for sharing
+under <a
+href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
+    <p>Made with <a href="https://github.com/rreece/markdown-memo">markdown-memo</a>.</p>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>

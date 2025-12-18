@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="R. Reece and J. Coauthor" />
+  <meta name="date" content="Wed Dec 17, 2025" />
+  <title>markdown-memo example document</title>
+  <meta name="keywords" content="academic writing, blogging, digital
+humanities, LaTeX, Markdown, open publishing, open science,
+productivity, technical writing, typesetting, writing" />
+  <link rel="stylesheet" type="text/css" href="templates/markdown-memo.css" />
+  <link rel="icon" type="image/png" href="img/markdown-favicon-196x196.png" />
+
+
+<!--- MathJax stuff -->
+<script type="text/javascript" src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+<!--- toggle_more function  -->
+<script type="text/javascript">
+    //<![CDATA[
+    function toggle_more(objID) {
+        if (!document.getElementById) return;
+        var ob = document.getElementById(objID).style;
+        ob.display = (ob.display == 'block')?'none':'block';
+        var ob2 = document.getElementById('link:'+objID);
+        ob2.className = (ob2.className == 'open') ? 'closed' : 'open';
+    }
+    //]]>
+</script>
+
+</head>
+
+<body>
+
+<hr/>
+<!--
+<div id="site_header">
+</div>
+-->
+
+<!--
+<div id="beforebody">
+</div>
+-->
+
+<div id="mainbody">
+<div id="pagecontainer">
+
+<!--- NOTE: h1 already included. Start writing index.md with an h2 -->
+<h1>markdown-memo example document</h1>
+
+<p class="subtitle">make writing easier and more productive</p>
+
+<div class="authors">
+<p><a href="http://rreece.github.io/">Ryan Reece</a><a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Jane Coauthor<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></p>
+</div>
+
+<div class="abstract">
+<p>This is an example document discussing and demonstrating how to use
+the markdown-memo package, meant to aid quick development of quality
+html and pdf documents from simple Markdown markup. Markdown-memo is
+developed by Ryan Reece at <a
+href="https://github.com/rreece/markdown-memo">https://github.com/rreece/markdown-memo</a>.</p>
+
+<p><i>Keywords:</i>
+academic writing, blogging, digital humanities, LaTeX, Markdown, open
+publishing, open science, productivity, technical writing, typesetting,
+writing
+</p>
+</div>
+
+<h3 class="unnumbered" id="contents">Contents</h3>
+<ol type="1">
+<li><strong><a href="01-introduction.html">Introduction</a></strong>
+<ol type="1">
+<li><a href="01-introduction.html#what-this-is-for">What this is
+for</a></li>
+<li><a href="01-introduction.html#how-it-works">How it works</a></li>
+</ol></li>
+<li><strong><a href="02-getting-started.html">Getting
+started</a></strong>
+<ol type="1">
+<li><a
+href="02-getting-started.html#checking-out-the-template">Checking-out
+the template</a></li>
+<li><a href="02-getting-started.html#requirements">Requirements</a></li>
+<li><a
+href="02-getting-started.html#starting-a-page-or-section">Starting a
+page or section</a></li>
+<li><a href="02-getting-started.html#going-from-there">Going from
+there</a></li>
+<li><a href="02-getting-started.html#building-your-document">Building
+your document</a></li>
+</ol></li>
+<li><strong><a href="03-basics.html">Markdown basics</a></strong>
+<ol type="1">
+<li><a href="03-basics.html#sec:sections">Sections</a></li>
+<li><a href="03-basics.html#sec:lists">Lists</a></li>
+<li><a href="03-basics.html#sec:blocks">Blocks</a></li>
+<li><a href="03-basics.html#sec:fonts">Fonts</a></li>
+<li><a href="03-basics.html#sec:links-and-labels">Links and
+labels</a></li>
+<li><a href="03-basics.html#sec:footnotes">Footnotes</a></li>
+</ol></li>
+<li><strong><a href="04-bibliographies.html">Bibliographies</a></strong>
+<ol type="1">
+<li><a href="04-bibliographies.html#making-a-bibliography">Making a
+bibliography</a></li>
+<li><a href="04-bibliographies.html#doing-citations">Doing
+citations</a></li>
+</ol></li>
+<li><strong><a href="05-math.html">Mathematical expressions</a></strong>
+<ol type="1">
+<li><a href="05-math.html#typesetting-math">Typesetting math</a></li>
+<li><a href="05-math.html#mathjax">Mathjax</a></li>
+</ol></li>
+<li><strong><a href="06-figs-tables.html">Floats, Figures, and
+Tables</a></strong>
+<ol type="1">
+<li><a href="06-figs-tables.html#figures">Figures</a></li>
+<li><a href="06-figs-tables.html#tables">Tables</a></li>
+<li><a href="06-figs-tables.html#table-of-contents-per-html-page">Table
+of contents per html page</a></li>
+<li><a href="06-figs-tables.html#clickmore">Clickmore</a></li>
+<li><a href="06-figs-tables.html#plottable">PlotTable</a></li>
+</ol></li>
+<li><strong><a href="07-conclusion.html">Conclusion</a></strong></li>
+<li><strong><a
+href="08-acknowledgements.html">Acknowledgements</a></strong></li>
+<li><strong><a href="09-appendix-a.html">Special features</a></strong>
+<ol type="1">
+<li><a href="09-appendix-a.html#special-files">Special files</a></li>
+<li><a href="09-appendix-a.html#disqus-integration">Disqus
+integration</a></li>
+<li><a href="09-appendix-a.html#google-analytics-integration">Google
+analytics integration</a></li>
+<li><a href="09-appendix-a.html#word-count">Word count</a></li>
+</ol></li>
+</ol>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>University of California, Santa Cruz / <a
+href="mailto:ryan.reece@gmail.com"
+class="email">ryan.reece@gmail.com</a> / <a
+href="http://rreece.github.io" class="uri">http://rreece.github.io</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn2"><p>Joe University, Joeville / <a href="mailto:jane@joe.edu"
+class="email">jane@joe.edu</a> / <a href="http://jane.joe.edu"
+class="uri">http://jane.joe.edu</a><a href="#fnref2"
+class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+</ol>
+</section>
+
+</div> <!-- end pagecontainer -->
+</div> <!-- end mainbody -->
+
+<!--
+<div id="afterbody">
+</div>
+-->
+
+<div id="site_footer">
+  <div class="signature">
+    <p><i>R. Reece and J. Coauthor</i></p>
+    <p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+    <p>Wed Dec 17, 2025</p>
+  </div>
+  <div class="license">
+    <p><span class="copy-left">&#xA9;</span> 2015-2021 <a
+href="http://rreece.github.io/">Ryan Reece</a>. Licensed for sharing
+under <a
+href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
+    <p>Made with <a href="https://github.com/rreece/markdown-memo">markdown-memo</a>.</p>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>

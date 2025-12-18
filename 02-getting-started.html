@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="R. Reece and J. Coauthor" />
+  <meta name="date" content="Wed Dec 17, 2025" />
+  <title>Getting started -  markdown-memo example document</title>
+  <meta name="keywords" content="academic writing, blogging, digital
+humanities, LaTeX, Markdown, open publishing, open science,
+productivity, technical writing, typesetting, writing" />
+  <link rel="stylesheet" type="text/css" href="templates/markdown-memo.css"/>
+  <link rel="icon" type="image/png" href="img/markdown-favicon-196x196.png" />
+
+
+<!--- MathJax stuff -->
+<script type="text/javascript" src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+<!--- toggle_more function  -->
+<script type="text/javascript">
+    //<![CDATA[
+    function toggle_more(objID) {
+        if (!document.getElementById) return;
+        var ob = document.getElementById(objID).style;
+        ob.display = (ob.display == 'block')?'none':'block';
+        var ob2 = document.getElementById('link:'+objID);
+        ob2.className = (ob2.className == 'open') ? 'closed' : 'open';
+    }
+    //]]>
+</script>
+
+</head>
+
+<body>
+
+<div id="site_header">
+    <a href="./">markdown-memo example document</a>
+</div>
+
+<!--
+<div id="beforebody">
+</div>
+-->
+
+<div class="nav">
+<ul>
+    <li> <a href="./">&#8634;&nbsp;Contents</a> </li>
+    <li> <a href="#site_footer">&#8615;&nbsp;Bottom</a> </li>
+    <li> <a href="./01-introduction.html">&#8612;&nbsp;Previous</a> </li>
+    <li> <a href="./03-basics.html">&#8614;&nbsp;Next</a> </li>
+</ul>
+</div>
+
+<div id="mainbody">
+<div id="pagecontainer">
+
+<h1 id="getting-started">Getting started</h1>
+<h3 class="unnumbered" id="contents">Contents</h3>
+<ol type="1">
+<li><a
+href="02-getting-started.html#checking-out-the-template">Checking-out
+the template</a></li>
+<li><a href="02-getting-started.html#requirements">Requirements</a></li>
+<li><a
+href="02-getting-started.html#starting-a-page-or-section">Starting a
+page or section</a></li>
+<li><a href="02-getting-started.html#going-from-there">Going from
+there</a></li>
+<li><a href="02-getting-started.html#building-your-document">Building
+your document</a></li>
+<li><a href="02-getting-started.html#references">References</a></li>
+</ol>
+<h2 id="checking-out-the-template">Checking-out the template</h2>
+<p>Check out markdown-memo with a <a
+href="http://rogerdudler.github.io/git-guide/">simple git command</a>,
+like:</p>
+<pre><code>git clone https://github.com/rreece/markdown-memo.git</code></pre>
+<p>Some basic instructions are given in the <a
+href="https://github.com/rreece/markdown-memo/blob/master/README.md">README.md</a>.
+They are expanded on here.</p>
+<p>Basically, once you have cloned markdown-memo, if you satisfy its
+requirements you should be able to call <code>make</code> and receive
+reasonable html output, and call <code>make pdf</code> and receive a
+reasonable pdf.</p>
+<p>Feel free to rename markdown-memo as whatever is suitable to your
+project, and delete the example <code>*.md</code> files.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>make</li>
+<li>LaTeX (texlive/mactex)</li>
+<li>python</li>
+<li>pandoc</li>
+<li><a
+href="https://github.com/lierdakil/pandoc-crossref">pandoc-citeproc</a></li>
+<li>pandoc-crossref</li>
+<li>matplotlib (for pagecount and wordcount plots)</li>
+<li>xpdf (pdfinfo command for pagecount)</li>
+</ul>
+<p>First, if you are on a Mac, you should install <a
+href="https://developer.apple.com/xcode/">Xcode</a> through the Apple
+app store to get <code>make</code> and basic build utilities. Then you
+should install <a href="http://brew.sh/">homebrew</a> for package
+management<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>.</p>
+<p>Some basic requirements I had to install with homebrew were the
+following, and I got <a
+href="https://pip.readthedocs.io/en/stable/installing/">pip</a> and used
+it to install somethings:</p>
+<pre><code>brew install wget
+brew install xpdf
+sudo python get-pip.py 
+sudo pip install scipy
+sudo pip install matplotlib
+sudo pip install pandas</code></pre>
+<p>Then, with homebrew, the main packages to install are</p>
+<pre><code>brew cask install mactex
+brew install pandoc
+brew install pandoc-citeproc
+brew install pandoc-crossref</code></pre>
+<p>Instead of homebrew, some years ago, I was using <em><a
+href="https://www.macports.org/">macports</a></em>.</p>
+<div class="clickmore">
+<a id="link:macports1" class="closed" onclick="toggle_more('macports1')">Click
+for details on using macports</a>
+</div>
+<div id="macports1" class="more">
+<p>Using macports, I installed</p>
+<pre><code>sudo port selfupdate
+sudo port install texlive-latex texlive-latex-recommended texlive-latex-extra texlive-math-extra
+sudo port install pandoc
+sudo port install hs-cabal-install
+cabal update
+cabal install pandoc-citeproc pandoc-crossref</code></pre>
+</div>
+<p><!-- end clickmore --></p>
+<p>If something doesn&#x2019;t work for you, please let me know! I&#x2019;ll do my
+best improve the documentation and make the software more robust as time
+allows. Contact me at:</p>
+<p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+<p>Please let me know if you have success or failure testing this on
+different systems.</p>
+<h2 id="starting-a-page-or-section">Starting a page or section</h2>
+<p>Just open or create a first <code>md</code> file in that directory
+like <code>01-introduction.md</code>, and start typing. Each file should
+probably correspond to a webpage or section in the document, and in that
+case, it should begin with an <code>h1</code>-level heading (section),
+denoted with a double-rule of equal-signs, like:</p>
+<pre><code>Section title
+===============================================================================</code></pre>
+<p>Or marked like this:</p>
+<pre><code># Section title</code></pre>
+<p>Then you can have sub-sections as you wish, and/or just start typing
+the main text. There&#x2019;s no need for additional markup or html.</p>
+<p>You can delete the example <code>*.md</code> files within this
+template when beginning your project.</p>
+<h2 id="going-from-there">Going from there</h2>
+<p>The following sections of this example document will show examples of
+Markdown syntax. For now, briefly, some examples of <a
+href="http://daringfireball.net/projects/markdown/syntax">Markdown
+syntax</a> are</p>
+<pre><code>Section 1
+=================================
+
+Sub-section 1
+---------------------------------
+
+[Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum)
+dolor sit amet, duo ut putant verear, nam ut brute utroque.
+Officiis qualisque conceptam te duo, eu vim soluta numquam, has ut aliquip
+accusamus. Probo aliquam pri id. Mutat singulis ad vis, eam euismod pertinax
+an, ea tale volumus vel. At porro soleat est. Debet facilis admodum an sed,
+at falli feugiat est.
+
+1.  one
+1.  two
+1.  three
+
+You can do latex in-line, $e^{i\pi} + 1 = 0$, like that.
+Or equations:
+
+\begin{equation}
+    \int_{\partial\Omega} \omega = \int_{\Omega} \mathrm{d}\omega \,.
+\end{equation}</code></pre>
+<h2 id="building-your-document">Building your document</h2>
+<p>In addition to writing the basic <code>md</code> files for your
+project, you need to write a metadata file: <code>meta.yaml</code>. See
+the example metadata there.</p>
+<p>Then you can build your document. A lot of the inner-workings of
+markdown-memo are done in the <code>Makefile</code>.</p>
+<ul>
+<li>Call <code>make</code> or <code>make html</code> to generate valid
+xhtml. For example, <a
+href="http://rreece.github.io/sw/markdown-memo/">this document</a>.</li>
+<li>Call <code>make pdf</code> to generate a pdf document. For example,
+<a href="http://rreece.github.io/sw/markdown-memo/example.pdf">this
+document</a>.</li>
+<li>Call <code>make clean</code> to delete temporary LaTeX files.</li>
+<li>Call <code>make realclean</code> to additionally delete the output
+html and pdf files.</li>
+</ul>
+<p>I use an image of my email to hide it from text crawlers. Please
+replace <code>img/my-email.png</code> with a screenshot of your email
+address instead of mine, or just remove the use of the image in
+<code>meta.yaml</code>.</p>
+<p>Customize the files in <code>templates/</code> to adjust the format
+of the output html and pdfs files to your needs.</p>
+<h2 id="references">References</h2>
+<p></p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>University of California, Santa Cruz / <a
+href="mailto:ryan.reece@gmail.com"
+class="email">ryan.reece@gmail.com</a> / <a
+href="http://rreece.github.io" class="uri">http://rreece.github.io</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn2"><p>Joe University, Joeville / <a href="mailto:jane@joe.edu"
+class="email">jane@joe.edu</a> / <a href="http://jane.joe.edu"
+class="uri">http://jane.joe.edu</a><a href="#fnref2"
+class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+<li id="fn3"><p>On my Mac, I used to install the missing dependencies
+through <a href="https://www.macports.org/">macports</a>, but beginning
+with OS 10.11, I started using <a href="http://brew.sh/">homebrew</a>.<a
+href="#fnref3" class="footnote-back" role="doc-backlink">&#x21A9;&#xFE0E;</a></p></li>
+</ol>
+</section>
+
+</div> <!-- end pagecontainer -->
+</div> <!-- end mainbody -->
+
+<div class="nav">
+<ul>
+    <li> <a href="./">&#8634;&nbsp;Contents</a> </li>
+    <li> <a href="#site_header">&#8613;&nbsp;Top</a> </li>
+    <li> <a href="./01-introduction.html">&#8612;&nbsp;Previous</a> </li>
+    <li> <a href="./03-basics.html">&#8614;&nbsp;Next</a> </li>
+</ul>
+</div>
+
+<!--
+<div id="afterbody">
+</div>
+-->
+
+<div id="site_footer">
+  <div class="signature">
+    <p><i>R. Reece and J. Coauthor</i></p>
+    <p><img class="email" src="img/my-email.png" alt="my email address"/></p>
+    <p>Wed Dec 17, 2025</p>
+  </div>
+  <div class="license">
+    <p><span class="copy-left">&#xA9;</span> 2015-2021 <a
+href="http://rreece.github.io/">Ryan Reece</a>. Licensed for sharing
+under <a
+href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
+    <p>Made with <a href="https://github.com/rreece/markdown-memo">markdown-memo</a>.</p>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+
+</body>
+</html>
