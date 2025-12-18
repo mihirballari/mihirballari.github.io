@@ -43,7 +43,13 @@ import matplotlib.pyplot as plt
 
 # print(plt.style.available) # [u'dark_background', u'bmh', u'grayscale', u'ggplot', u'fivethirtyeight']
 #plt.style.use('fivethirtyeight')
-plt.style.use('seaborn-deep')
+try:
+    plt.style.use('seaborn-v0_8-deep')
+except OSError:
+    try:
+        plt.style.use('seaborn-deep')
+    except OSError:
+        pass
 plt.rcParams['legend.numpoints'] = 1
 plt.rcParams['figure.figsize'] = (15, 5)
 
